@@ -14,9 +14,11 @@ module.exports = {
 				where: {
 					name: req.body.name,
 				},
-				name: req.body.username,
-				description: req.body.description,
-				status: req.body.status
+				defaults: {
+					name: req.body.name,
+					description: req.body.description,
+					status: req.body.status
+				}
 			})
 			.then(juegos => res.status(200).send(juegos))
 			.catch(error => res.status(400).send(error))

@@ -26,9 +26,18 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	};
 	participation.init({
-		jugador_id: DataTypes.INTEGER,
-		juego_id: DataTypes.INTEGER,
-		status: DataTypes.CHAR
+		jugador_id: {
+			allowNull: false,
+			type: DataTypes.INTEGER
+		},
+		juego_id: {
+			allowNull: false,
+			type: DataTypes.INTEGER
+		},
+		status: {
+			allowNull: false,
+			type: DataTypes.CHAR
+		}
 	}, {
 		sequelize,
 		modelName: 'participation',
