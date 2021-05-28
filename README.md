@@ -4,9 +4,10 @@ Con el objetivo de desarrollar un backend con microservicios, en este repositori
 
 Para ello vamos a seguir las instrucciones de cómo crear nuestro backend utilizando el siguiente [Post en Medium](https://tomasmalio.medium.com/node-js-express-y-mysql-con-sequelize-ec0a7c0ae292).
 
-Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar los microservicios:
+Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar los microservicios. Para iniciar este proyecto:
 
-**npm start**
+1) **npm install**
+2) **npm start**
 
 ¡Que comience el show!
 
