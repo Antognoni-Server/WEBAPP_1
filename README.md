@@ -1,5 +1,5 @@
 
-# User API Services
+# Users API Services
 ## Create User
 
 * **URL**
@@ -111,9 +111,91 @@
   * **Code:** 404 NOT FOUND <br />
     **Content:** `Cannot ERROR`
 
-# Game API Services
-/api/juegos/create
-/api/juegos/list
+# Games API Services
+
+## Create Game
+
+* **URL**
+
+  http://localhost:8000/api/juegos/create
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    None
+
+* **Data Params**: JSON
+
+   ```json
+   {
+       "name": "Pacman",
+       "description": "Mi juego preferido",
+       "status": 1
+   }
+   ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `{
+        "id": 1,
+        "name": "Pacman",
+        "description": "Mi juego preferido",
+        "status": "1",
+        "createdAt": "2020-10-09T23:52:26.000Z",
+        "updatedAt": "2020-10-09T23:52:26.000Z"
+    }`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
+
+## List Games
+
+* **URL**
+
+  http://localhost:8000/api/juegos/list
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    None
+
+* **Data Params**:
+
+   None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `[
+        {
+            "id": 1,
+            "name": "Pacman",
+            "description": "Mi juego preferido",
+            "status": "1",
+            "createdAt": "2020-10-09T23:52:26.000Z",
+            "updatedAt": "2020-10-09T23:52:26.000Z"
+        }
+    ]`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
 
 ## Find Game
 
@@ -131,7 +213,7 @@
  
     `username=[String]`
 
-* **Data Params**
+* **Data Params**: JSON
 
   ```json
   {
@@ -156,3 +238,5 @@
 
   * **Code:** 404 NOT FOUND <br />
     **Content:** `Cannot ERROR`
+
+# Participants API Services
