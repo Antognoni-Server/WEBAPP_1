@@ -24,8 +24,14 @@ Para crear un usuario, vamos a utilizar el método POST y el servicio **Create**
 
 * **Success Response:**
 
-  * **Code:** 200
-    **Content:** `{ "id": 1, "username": "tomasmalio", "status": "1"}`
+  * **Code:** 200 <br />
+    **Content:** 
+    `{ 
+        "id": 1, 
+        "username": 
+        "tomasmalio", 
+        "status": "1"
+    }`
 
 # Listando los usuarios creados
 Ahora que tenemos creados nuestros usuarios, vamos a listarlos para entender cómo se están guardando y que información obtenemos. Para ello, vamos a consultar el servicio **List** de **Usuario** (http://localhost:8000/api/usuario/list).
