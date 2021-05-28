@@ -24,7 +24,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     { 
         "id": 1, 
@@ -37,7 +37,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot POST`
+  * **Content:** `Cannot POST`
 
 ## List User
 
@@ -62,7 +62,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     [
         { 
@@ -76,7 +76,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 ## Find User
 
@@ -101,7 +101,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     {
         "id": 1,
@@ -114,7 +114,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 # Games API Services
 
@@ -147,7 +147,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     {
         "id": 1,
@@ -161,7 +161,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 ## List Games
 
@@ -186,7 +186,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     [
         {
@@ -202,7 +202,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 ## Find Game
 
@@ -231,7 +231,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     {
         "id": 1,
@@ -245,7 +245,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 # Participants API Services
 
@@ -298,7 +298,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     {
         "id": 1,
@@ -312,7 +312,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
 
 ## List Games
 
@@ -337,7 +337,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** 
+  * **Content:** 
     ```json
     [
         {
@@ -357,4 +357,4 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+  * **Content:** `Cannot ERROR`
