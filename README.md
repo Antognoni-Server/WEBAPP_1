@@ -1,11 +1,10 @@
 
-# Create User
-Para crear un usuario, vamos a utilizar el método POST y el servicio **Create** de **Usuario** (/api/usuario/create/username/:username/status/:status)
-
+# User API Services
+## Create User
 
 * **URL**
 
-  /api/usuario/create/username/:username/status/:status
+  http://localhost:8000/api/usuario/create/username/:username/status/:status
 
 * **Method:**
 
@@ -33,12 +32,16 @@ Para crear un usuario, vamos a utilizar el método POST y el servicio **Create**
         "status": "1"
     }`
 
-# List User
-Ahora que tenemos creados nuestros usuarios, vamos a listarlos para entender cómo se están guardando y que información obtenemos. Para ello, vamos a consultar el servicio **List** de **Usuario** (http://localhost:8000/api/usuario/list).
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot POST`
+
+## List User
 
 * **URL**
 
-  /api/usuario/list/
+  http://localhost:8000/api/usuario/list/
 
 * **Method:**
 
@@ -64,3 +67,49 @@ Ahora que tenemos creados nuestros usuarios, vamos a listarlos para entender có
         "tomasmalio", 
         "status": "1"
     }]`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
+
+## Find User
+
+* **URL**
+
+  http://localhost:8000/api/usuario/find/username/:username
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    `username=[String]`
+
+* **Data Params**
+
+  None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `{ 
+        "id": 1, 
+        "username": 
+        "tomasmalio", 
+        "status": "1"
+    }`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
+
+# Game API Services
+/api/juego/create
+/api/juego/list
+/api/juego/find
