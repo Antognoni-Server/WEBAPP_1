@@ -112,4 +112,43 @@
 # Game API Services
 /api/juego/create
 /api/juego/list
-/api/juego/find
+
+## Find Game
+
+* **URL**
+
+  http://localhost:8000/api/juego/find
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    `username=[String]`
+
+* **Data Params**
+
+  ```json
+  {
+      
+  }
+  ``
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `{ 
+        "id": 1, 
+        "username": 
+        "tomasmalio", 
+        "status": "1"
+    }`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`

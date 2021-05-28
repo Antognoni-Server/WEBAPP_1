@@ -1,22 +1,27 @@
-/* Controllers */
-const usuarioController = require('../controllers').usuario;
-const juegoController = require('../controllers').juego;
-const participacionController = require('../controllers').participacion;
+// Controllers
+const usuariosController = require('../controllers/usuarios');
+const juegosController = require('../controllers/juegos');
+const participationController = require('../controllers/participation');
 
 module.exports = (app) => {
+
 	app.get('/api', (req, res) => res.status(200).send({
-		message: 'Example project did not give you access to the api web services',
+		message: 'Buenisimo entramos en nuestra api',
 	}));
 
-	app.post('/api/usuario/create/username/:username/status/:status', usuarioController.create);
-	app.get('/api/usuario/list', usuarioController.list);
-	app.get('/api/usuario/find/username/:username', usuarioController.find);
+	// Routes of Web Services
+	// Users
+	app.post('/api/usuarios/create/username/:username/status/:status', usuariosController.create);
+	app.get('/api/usuarios/list', usuariosController.list);
+	app.get('/api/usuarios/find/username/:username', usuariosController.find);
 
-	app.post('/api/juego/create', juegoController.create);
-	app.get('/api/juego/list', juegoController.list);
-	app.get('/api/juego/find', juegoController.find);
+	// Games
+	app.post('/api/juegos/create', juegosController.create);
+	app.get('/api/juegos/list', juegosController.list);
+	app.get('/api/juegos/find', juegosController.find);
 
-	app.post('/api/participacion/create', participacionController.create);
-	app.get('/api/participacion/list', participacionController.list);
-	app.get('/api/participacion/find/id/:id', participacionController.find);
+	// Participations
+	app.post('/api/participaciones/create', participationController.create);
+	app.get('/api/participaciones/list', participationController.list);
+
 };
