@@ -4,7 +4,7 @@
 
 * **URL**
 
-  http://localhost:8000/api/usuario/create/username/:username/status/:status
+  http://localhost:8000/api/usuarios/create/username/:username/status/:status
 
 * **Method:**
 
@@ -27,9 +27,10 @@
     **Content:** 
     `{ 
         "id": 1, 
-        "username": 
-        "tomasmalio", 
-        "status": "1"
+        "username": "tomasmalio", 
+        "status": "1",
+        "createdAt": "2020-10-09T23:42:44.000Z",
+        "updatedAt": "2020-10-09T23:42:44.000Z"
     }`
 
 * **Error Response:**
@@ -41,7 +42,7 @@
 
 * **URL**
 
-  http://localhost:8000/api/usuario/list/
+  http://localhost:8000/api/usuarios/list/
 
 * **Method:**
 
@@ -77,7 +78,7 @@
 
 * **URL**
 
-  http://localhost:8000/api/usuario/find/username/:username
+  http://localhost:8000/api/usuarios/find/username/:username
 
 * **Method:**
 
@@ -97,11 +98,12 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{ 
-        "id": 1, 
-        "username": 
-        "tomasmalio", 
-        "status": "1"
+    `{
+        "id": 1,
+        "username": "tomasmalio",
+        "status": "1",
+        "createdAt": "2020-10-09T23:42:44.000Z",
+        "updatedAt": "2020-10-09T23:42:44.000Z"
     }`
 
 * **Error Response:**
@@ -110,14 +112,14 @@
     **Content:** `Cannot ERROR`
 
 # Game API Services
-/api/juego/create
-/api/juego/list
+/api/juegos/create
+/api/juegos/list
 
 ## Find Game
 
 * **URL**
 
-  http://localhost:8000/api/juego/find
+  http://localhost:8000/api/juegos/find
 
 * **Method:**
 
@@ -133,19 +135,21 @@
 
   ```json
   {
-      
+      "name": "Pacman"
   }
-  ``
+  ```
 
 * **Success Response:**
 
   * **Code:** 200 <br />
     **Content:** 
-    `{ 
-        "id": 1, 
-        "username": 
-        "tomasmalio", 
-        "status": "1"
+    `{
+        "id": 1,
+        "name": "Pacman",
+        "description": "Mi juego preferido",
+        "status": "1",
+        "createdAt": "2020-10-09T23:52:26.000Z",
+        "updatedAt": "2020-10-09T23:52:26.000Z"
     }`
 
 * **Error Response:**
