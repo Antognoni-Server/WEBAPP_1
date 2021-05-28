@@ -13,8 +13,6 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	create(req, res) {
-
-
 		// Looking for the user
 		// SELECT * FROM usuarios WHERE id = 1 OR username = 'Lucas
 		const responseUsuario = usuarios.findOne({
