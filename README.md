@@ -240,3 +240,111 @@
     **Content:** `Cannot ERROR`
 
 # Participants API Services
+
+## Create Participant
+
+* **URL**
+
+  http://localhost:8000/api/participaciones/create
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    None
+
+* **Data Params**: JSON
+
+   ```json
+   {
+       "user": "tomasmalio",
+       "game": "Pacman",
+       "status": 1
+   }
+   ```
+
+   OR
+
+   ```json
+   {
+       "user": 1,
+       "game": "Pacman",
+       "status": 1
+   }
+   ```
+
+    OR
+
+   ```json
+   {
+       "user": "tomasmalio",
+       "game": 1,
+       "status": 1
+   }
+   ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `{
+        "id": 1,
+        "jugador_id": 1,
+        "juego_id": 1,
+        "status": "1",
+        "updatedAt": "2021-05-28T10:05:56.770Z",
+        "createdAt": "2021-05-28T10:05:56.770Z"
+    }`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
+
+## List Games
+
+* **URL**
+
+  http://localhost:8000/api/participaciones/list
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+    None
+
+* **Data Params**:
+
+   None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `[
+        {
+            "status": "1",
+            "usuario": {
+                "id": 1,
+                "username": "tomasmalio"
+            },
+            "juego": {
+                "id": 1,
+                "name": "Pacman",
+                "description": "Mi juego preferido"
+            }
+        },
+    ]`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
