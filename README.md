@@ -25,13 +25,14 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{ 
+    ```json
+    { 
         "id": 1, 
         "username": "tomasmalio", 
         "status": "1",
         "createdAt": "2020-10-09T23:42:44.000Z",
         "updatedAt": "2020-10-09T23:42:44.000Z"
-    }`
+    }```
 
 * **Error Response:**
 
@@ -62,12 +63,15 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `[{ 
-        "id": 1, 
-        "username": 
-        "tomasmalio", 
-        "status": "1"
-    }]`
+    ```json
+    [
+        { 
+            "id": 1, 
+            "username": 
+            "tomasmalio", 
+            "status": "1"
+        }
+    ]```
 
 * **Error Response:**
 
@@ -98,13 +102,14 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{
+    ```json
+    {
         "id": 1,
         "username": "tomasmalio",
         "status": "1",
         "createdAt": "2020-10-09T23:42:44.000Z",
         "updatedAt": "2020-10-09T23:42:44.000Z"
-    }`
+    }```
 
 * **Error Response:**
 
@@ -143,14 +148,15 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{
+    ```json
+    {
         "id": 1,
         "name": "Pacman",
         "description": "Mi juego preferido",
         "status": "1",
         "createdAt": "2020-10-09T23:52:26.000Z",
         "updatedAt": "2020-10-09T23:52:26.000Z"
-    }`
+    }```
 
 * **Error Response:**
 
@@ -181,7 +187,8 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `[
+    ```json
+    [
         {
             "id": 1,
             "name": "Pacman",
@@ -190,7 +197,7 @@
             "createdAt": "2020-10-09T23:52:26.000Z",
             "updatedAt": "2020-10-09T23:52:26.000Z"
         }
-    ]`
+    ]```
 
 * **Error Response:**
 
@@ -225,14 +232,15 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{
+    ```json
+    {
         "id": 1,
         "name": "Pacman",
         "description": "Mi juego preferido",
         "status": "1",
         "createdAt": "2020-10-09T23:52:26.000Z",
         "updatedAt": "2020-10-09T23:52:26.000Z"
-    }`
+    }```
 
 * **Error Response:**
 
@@ -291,14 +299,15 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `{
+    ```json
+    {
         "id": 1,
         "jugador_id": 1,
         "juego_id": 1,
         "status": "1",
         "updatedAt": "2021-05-28T10:05:56.770Z",
         "createdAt": "2021-05-28T10:05:56.770Z"
-    }`
+    }```
 
 * **Error Response:**
 
@@ -329,7 +338,8 @@
 
   * **Code:** 200 <br />
     **Content:** 
-    `[
+    ```json
+    [
         {
             "status": "1",
             "usuario": {
@@ -342,7 +352,7 @@
                 "description": "Mi juego preferido"
             }
         },
-    ]`
+    ]```
 
 * **Error Response:**
 
