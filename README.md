@@ -150,7 +150,6 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
      "username": "[string]",
      "new_username": "[string]",
   }
-  ```
 
 * **Success Response:**
 
@@ -160,7 +159,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
     [
         1
     ]
-    ```
+    
 
 * **Error Response:**
 
