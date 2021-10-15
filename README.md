@@ -178,12 +178,6 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 * **Method:**
 
   `POST`
-  
-*  **URL Params**
-
-   **Required:**
- 
-    None
 
 * **Data Params**: JSON
 
