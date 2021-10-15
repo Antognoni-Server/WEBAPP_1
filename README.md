@@ -147,11 +147,8 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
  
    ```json
     {
-        "id": 1,
-        "username": "tomasmalio",
-        "status": "1",
-        "createdAt": "2020-10-09T23:42:44.000Z",
-        "updatedAt": "2020-10-09T23:42:44.000Z"
+        "username": "[String]",
+        "new_username": "[String]"
     }
     ```
 
