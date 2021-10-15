@@ -128,6 +128,42 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
   * **Code:** 404 NOT FOUND <br />
   * **Content:** `Cannot ERROR`
 
+## Update User
+
+* **URL**
+
+  http://localhost:8000/api/usuarios/updateuser/username/:username
+
+* **Method:**
+
+  `POST`
+  
+*  **Data Params**
+
+   **Required:**
+ 
+   ```json
+  {
+     "username": "[string]",
+     "new_username": "[string]",
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json
+    [
+        1
+    ]
+    ```
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `Cannot ERROR`
+
 # Games API Services
 
 ## Create Game

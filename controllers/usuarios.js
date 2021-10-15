@@ -56,5 +56,40 @@ module.exports = {
 			})
 			.then(usuarios => res.status(200).send(usuarios))
 			.catch(error => res.status(400).send(error))
+	},
+
+	/**
+	 * Update a user
+	 * 
+	 * Example: 
+	 * 	SELECT * FROM usuarios WHERE username = 'lucas'
+	 * 	UPDATE `usuarios` SET `username`=?,`updatedAt`=? WHERE `username` = ?
+	 * 
+	 * @param {*} req 
+	 * @param {*} res 
+	 */
+	updateUser(req, res) {
+
+		const responseUser = usuarios.findOne({
+			where: {
+				username: req.body.username
+			}
+		});
+
+		Promise
+			.all([responseUser])
+			.then(responses => {
+				return usuarios
+					.update({
+						username: req.body.new_username,
+					}, {
+						where: {
+							username: req.body.username,
+						},
+					}
+					)
+					.then(usuarios => res.status(200).send(usuarios))
+					.catch(error => res.status(400).send(error))
+			})
 	}
 }
