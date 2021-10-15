@@ -186,9 +186,9 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
    ```json
    {
-       "name": "Pacman",
-       "description": "Mi juego preferido",
-       "status": 1
+       "name": "[String]",
+       "description": "[String]",
+       "status": "[Integer]"
    }
 
 * **Success Response:**
@@ -260,18 +260,12 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 * **Method:**
 
   `GET`
-  
-*  **URL Params**
-
-   **Required:**
- 
-    `username=[String]`
 
 * **Data Params**: JSON
 
   ```json
   {
-      "name": "Pacman"
+      "name": "[String]"
   }
   ```
 
@@ -305,20 +299,14 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 * **Method:**
 
   `POST`
-  
-*  **URL Params**
-
-   **Required:**
- 
-    None
 
 * **Data Params**: JSON
 
    ```json
    {
-       "user": "tomasmalio",
-       "game": "Pacman",
-       "status": 1
+       "user": "[String]",
+       "game": "[String]",
+       "status": "[Integer]"
    }
    ```
 
@@ -326,9 +314,9 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
    ```json
    {
-       "user": 1,
-       "game": "Pacman",
-       "status": 1
+       "user": "[Integer]",
+       "game": "[String]",
+       "status": "[Integer]"
    }
    ```
 
@@ -336,9 +324,9 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
    ```json
    {
-       "user": "tomasmalio",
-       "game": 1,
-       "status": 1
+       "user": "[String]",
+       "game": "[Integer]",
+       "status": "[Integer]"
    }
    ```
 
