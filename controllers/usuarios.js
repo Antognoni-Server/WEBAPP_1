@@ -27,14 +27,18 @@ module.exports = {
 	/**
 	 * Find all users
 	 * 
-	 * Example: SELECT * FROM usuarios
+	 * Example: SELECT * FROM usuarios WHERE status = ?
 	 * 
-	 * @param {*} _ 
+	 * @param {*} req 
 	 * @param {*} res 
 	 */
-	list(_, res) {
+	list(req, res) {
 		return usuarios
-			.findAll({})
+			.findAll({
+				where: {
+					status: req.params.status
+				}
+			})
 			.then(usuarios => res.status(200).send(usuarios))
 			.catch(error => res.status(400).send(error))
 	},

@@ -56,7 +56,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/list/
+  http://localhost:8000/api/usuarios/list/status/:status
 
 * **Method:**
 
@@ -66,7 +66,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
    **Required:**
  
-   None
+   `status=[Integer]`
 
 * **Data Params**
 
@@ -80,8 +80,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
     [
         { 
             "id": 1, 
-            "username": 
-            "tomasmalio", 
+            "username": "tomasmalio",
             "status": "1"
         }
     ]

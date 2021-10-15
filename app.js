@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./routes')(app);
 
 app.get('*', (req, res) => res.status(200).send({
-	message: 'Bienvenidos, estás en la Web Services de API 2020 2C',
+	message: 'Bienvenidos, estás en la Web Services de API 2021 2C',
 }));
 
 const port = parseInt(process.env.PORT, 10) || 8000;

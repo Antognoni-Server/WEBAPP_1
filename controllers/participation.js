@@ -14,7 +14,9 @@ module.exports = {
 	 */
 	create(req, res) {
 		// Looking for the user
-		// SELECT * FROM usuarios WHERE id = 1 OR username = 'Lucas
+		// SELECT * FROM usuarios WHERE id = 1 OR username = 'Lucas'
+		// SELECT * FROM usuarios WHERE id = 1
+		// SELECT * FROM usuarios WHERE username = 'Lucas'
 		const responseUsuario = usuarios.findOne({
 			where: {
 				[Op.or]: [{
@@ -76,7 +78,8 @@ module.exports = {
 					]
 				}],
 				attributes: [
-					'status'
+					'status',
+					'juego_id'
 				]
 			})
 			.then(participation => res.status(200).send(participation))
