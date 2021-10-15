@@ -45,6 +45,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
         "createdAt": "2020-10-09T23:42:44.000Z",
         "updatedAt": "2020-10-09T23:42:44.000Z"
     }
+    ```
 
 * **Error Response:**
 
@@ -84,6 +85,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
             "status": "1"
         }
     ]
+    ```
 
 * **Error Response:**
 
@@ -122,6 +124,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
         "createdAt": "2020-10-09T23:42:44.000Z",
         "updatedAt": "2020-10-09T23:42:44.000Z"
     }
+    ```
 
 * **Error Response:**
 
@@ -147,6 +150,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
      "username": "[string]",
      "new_username": "[string]",
   }
+  ```
 
 * **Success Response:**
 
