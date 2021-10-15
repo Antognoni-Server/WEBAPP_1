@@ -190,7 +190,6 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
        "description": "Mi juego preferido",
        "status": 1
    }
-   ```
 
 * **Success Response:**
 
