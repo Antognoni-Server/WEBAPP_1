@@ -132,7 +132,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/updateuser/username/:username
+  http://localhost:8000/api/usuarios/updateuser
 
 * **Method:**
 
