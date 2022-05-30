@@ -112,8 +112,8 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 	`GET`
 	
 * **Headers Required:**
-	  Key: Autorization
-		Value: a88hasf8a23f23f23s8asf7sf8sa798fs87f7af73jnbjifjbf8723rubu7
+	* Key: Autorization
+	* Value: a88hasf8a23f23f23s8asf7sf8sa798fs87f7af73jnbjifjbf8723rubu7
 
 * **Success Response:**
 
