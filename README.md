@@ -79,15 +79,13 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 	`POST`
 	
-* **Body**
-	**Required:**
+* **Body Required:**
  
 	 ```json
 		{
 				"password": "[String]",
 				"email": "[String]"
-		}
-		```
+		}```
 
 * **Success Response:**
 
