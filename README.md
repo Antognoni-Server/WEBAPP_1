@@ -1,3 +1,17 @@
+**Tabla de Contenido:**
+- [Introducción](#introducci-n)
+- [Users API Services](#users-api-services)
+  * [Create User](#create-user)
+  * [List User](#list-user)
+  * [Find User](#find-user)
+  * [Update User](#update-user)
+- [Games API Services](#games-api-services)
+  * [Create Game](#create-game)
+  * [List Games](#list-games)
+  * [Find Game](#find-game)
+- [Participants API Services](#participants-api-services)
+  * [Create Participant](#create-participant)
+  * [List Games](#list-games-1)
 
 # Introducción
 Con el objetivo de desarrollar un backend con microservicios, en este repositorio estaremos viendo un ejemplo de cómo implementar: Node JS, Express y MySQL con Sequelize.
@@ -10,6 +24,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 2) **npm start**
 
 ¡Que comience el show!
+
 
 # Users API Services
 ## Create User
