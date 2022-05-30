@@ -47,7 +47,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 				"last_name": "[String]",
 				"email": "[String]",
 				"password": "[String]"
-		}```
+		}
 
 * **Success Response:**
 
@@ -85,7 +85,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		{
 				"password": "[String]",
 				"email": "[String]"
-		}```
+		}
 
 * **Success Response:**
 
