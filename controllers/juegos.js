@@ -5,6 +5,10 @@ module.exports = {
 	/**
 	 * Create a new juego
 	 * 
+	 * Methoud: POST
+	 * Headers: -
+	 * Body: -
+	 * 
 	 * @param {*} req 
 	 * @param {*} res 
 	 */
@@ -29,6 +33,10 @@ module.exports = {
 	 * 
 	 * Example: SELECT * FROM usuarios
 	 * 
+	 * Methoud: GET
+	 * Headers: -
+	 * Body: -
+	 * 
 	 * @param {*} _ 
 	 * @param {*} res 
 	 */
@@ -43,6 +51,10 @@ module.exports = {
 	 * Find one user in the table games
 	 * 
 	 * Example: SELECT * FROM juegos WHERE name = 'Pac Man'
+	 * 
+	 * Methoud: GET
+	 * Headers: -
+	 * Body: -
 	 * 
 	 * @param {*} req 
 	 * @param {*} res 

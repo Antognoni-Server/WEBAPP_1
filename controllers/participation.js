@@ -9,6 +9,10 @@ module.exports = {
 	/**
 	 * Create a new participation
 	 * 
+	 * Methoud: POST
+	 * Headers: -
+	 * Body: -
+	 * 
 	 * @param {*} req 
 	 * @param {*} res 
 	 */
@@ -54,6 +58,10 @@ module.exports = {
 
 	/**
 	 * List of participations
+	 * 
+	 * Methoud: GET
+	 * Headers: -
+	 * Body: -
 	 * 
 	 * @param {*} _ 
 	 * @param {*} res 

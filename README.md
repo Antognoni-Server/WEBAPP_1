@@ -1,6 +1,10 @@
 **Tabla de Contenido:**
 - [Introducción](#introducci-n)
-- [Users API Services](#users-api-services)
+- [User](#user)
+  * [Create a new user](#create-a-new-user)
+  * [Login a user](#login-a-user)
+  * [Get the user by token](#get-the-user-by-token)
+- [Players API Services](#players-api-services)
   * [Create User](#create-user)
   * [List User](#list-user)
   * [Find User](#find-user)
@@ -25,161 +29,272 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 ¡Que comience el show!
 
+# User
+## Create a new user
+* **URL**
 
-# Users API Services
+	http://localhost:8000/api
+
+* **Method:**
+
+	`POST`
+	
+* **Body**
+	**Required:**
+ 
+	 ```json
+		{
+				"first_name": "[String]",
+				"last_name": "[String]",
+				"email": "[String]",
+				"password": "[String]"
+		}
+		```
+
+* **Success Response:**
+
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{ 
+				"id": 1, 
+				"first_name": "Tomás", 
+				"last_name": "Malio", 
+				"email": "tomas@dominio.com", 
+				"password": "123456789",
+				"createdAt": "2020-10-09T23:42:44.000Z",
+				"updatedAt": "2020-10-09T23:42:44.000Z"
+		}
+		```
+
+* **Error Response:**
+
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot POST`
+
+## Login a user
+* **URL**
+
+	http://localhost:8000/api/login
+
+* **Method:**
+
+	`POST`
+	
+* **Body**
+	**Required:**
+ 
+	 ```json
+		{
+				"password": "[String]",
+				"email": "[String]"
+		}
+		```
+
+* **Success Response:**
+
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{ 
+				"token": "a88hasf8a23f23f23s8asf7sf8sa798fs87f7af73jnbjifjbf8723rubu7"
+		}
+		```
+
+* **Error Response:**
+
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot POST`
+
+## Get the user by token
+* **URL**
+
+	http://localhost:8000/api/me
+
+* **Method:**
+
+	`GET`
+	
+* **Headers**
+	**Required:**
+ 
+	  - Key: Autorization
+		- Value: a88hasf8a23f23f23s8asf7sf8sa798fs87f7af73jnbjifjbf8723rubu7
+
+* **Success Response:**
+
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{ 
+				"id": 3,
+				"first_name": "Tomas",
+				"last_name": "Malio",
+				"email": "tomas@dominio.com",
+				"createdAt": "2022-05-30T14:24:51.000Z",
+				"updatedAt": "2022-05-30T14:24:51.000Z"
+		}
+		```
+
+* **Error Response:**
+
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot GET`
+
+# Players API Services
 ## Create User
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/create/username/:username/status/:status
+	http://localhost:8000/api/usuarios/create/username/:username/status/:status
 
 * **Method:**
 
-  `POST`
-  
+	`POST`
+	
 *  **URL Params**
 
-   **Required:**
+	 **Required:**
  
-   `username=[String]`
-   `status=[Integer]`
+	 `username=[String]`
+	 `status=[Integer]`
 
 * **Data Params**
 
-  None
+	None
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    { 
-        "id": 1, 
-        "username": "tomasmalio", 
-        "status": "1",
-        "createdAt": "2020-10-09T23:42:44.000Z",
-        "updatedAt": "2020-10-09T23:42:44.000Z"
-    }
-    ```
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{ 
+				"id": 1, 
+				"username": "tomasmalio", 
+				"status": "1",
+				"createdAt": "2020-10-09T23:42:44.000Z",
+				"updatedAt": "2020-10-09T23:42:44.000Z"
+		}
+		```
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot POST`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot POST`
 
 ## List User
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/list/status/:status
+	http://localhost:8000/api/usuarios/list/status/:status
 
 * **Method:**
 
-  `GET`
-  
+	`GET`
+	
 *  **URL Params**
 
-   **Required:**
+	 **Required:**
  
-   `status=[Integer]`
+	 `status=[Integer]`
 
 * **Data Params**
 
-  None
+	None
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    [
-        { 
-            "id": 1, 
-            "username": "tomasmalio",
-            "status": "1"
-        }
-    ]
-    ```
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		[
+				{ 
+						"id": 1, 
+						"username": "tomasmalio",
+						"status": "1"
+				}
+		]
+		```
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 ## Find User
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/find/username/:username
+	http://localhost:8000/api/usuarios/find/username/:username
 
 * **Method:**
 
-  `GET`
-  
+	`GET`
+	
 *  **URL Params**
 
-   **Required:**
+	 **Required:**
  
-    `username=[String]`
+		`username=[String]`
 
 * **Data Params**
 
-  None
+	None
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    {
-        "id": 1,
-        "username": "tomasmalio",
-        "status": "1",
-        "createdAt": "2020-10-09T23:42:44.000Z",
-        "updatedAt": "2020-10-09T23:42:44.000Z"
-    }
-    ```
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{
+				"id": 1,
+				"username": "tomasmalio",
+				"status": "1",
+				"createdAt": "2020-10-09T23:42:44.000Z",
+				"updatedAt": "2020-10-09T23:42:44.000Z"
+		}
+		```
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 ## Update User
 
 * **URL**
 
-  http://localhost:8000/api/usuarios/updateuser
+	http://localhost:8000/api/usuarios/updateuser
 
 * **Method:**
 
-  `POST`
-  
+	`POST`
+	
 *  **Data Params**
 
-   **Required:**
+	 **Required:**
  
-   ```json
-    {
-        "username": "[String]",
-        "new_username": "[String]"
-    }
-    ```
+	 ```json
+		{
+				"username": "[String]",
+				"new_username": "[String]"
+		}
+		```
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-    ```json
-    [
-        1
-    ]
-    
+	* **Code:** 200 <br />
+		**Content:** 
+		```json
+		[
+				1
+		]
+		
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+		**Content:** `Cannot ERROR`
 
 # Games API Services
 
@@ -187,117 +302,117 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 * **URL**
 
-  http://localhost:8000/api/juegos/create
+	http://localhost:8000/api/juegos/create
 
 * **Method:**
 
-  `POST`
+	`POST`
 
 * **Data Params**: JSON
 
-   ```json
-   {
-       "name": "[String]",
-       "description": "[String]",
-       "status": "[Integer]"
-   }
+	 ```json
+	 {
+			 "name": "[String]",
+			 "description": "[String]",
+			 "status": "[Integer]"
+	 }
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    {
-        "id": 1,
-        "name": "Pacman",
-        "description": "Mi juego preferido",
-        "status": "1",
-        "createdAt": "2020-10-09T23:52:26.000Z",
-        "updatedAt": "2020-10-09T23:52:26.000Z"
-    }
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{
+				"id": 1,
+				"name": "Pacman",
+				"description": "Mi juego preferido",
+				"status": "1",
+				"createdAt": "2020-10-09T23:52:26.000Z",
+				"updatedAt": "2020-10-09T23:52:26.000Z"
+		}
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 ## List Games
 
 * **URL**
 
-  http://localhost:8000/api/juegos/list
+	http://localhost:8000/api/juegos/list
 
 * **Method:**
 
-  `GET`
-  
+	`GET`
+	
 *  **URL Params**
 
-   **Required:**
+	 **Required:**
  
-    None
+		None
 
 * **Data Params**:
 
-   None
+	 None
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    [
-        {
-            "id": 1,
-            "name": "Pacman",
-            "description": "Mi juego preferido",
-            "status": "1",
-            "createdAt": "2020-10-09T23:52:26.000Z",
-            "updatedAt": "2020-10-09T23:52:26.000Z"
-        }
-    ]
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		[
+				{
+						"id": 1,
+						"name": "Pacman",
+						"description": "Mi juego preferido",
+						"status": "1",
+						"createdAt": "2020-10-09T23:52:26.000Z",
+						"updatedAt": "2020-10-09T23:52:26.000Z"
+				}
+		]
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 ## Find Game
 
 * **URL**
 
-  http://localhost:8000/api/juegos/find
+	http://localhost:8000/api/juegos/find
 
 * **Method:**
 
-  `GET`
+	`GET`
 
 * **Data Params**: JSON
 
-  ```json
-  {
-      "name": "[String]"
-  }
-  ```
+	```json
+	{
+			"name": "[String]"
+	}
+	```
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    {
-        "id": 1,
-        "name": "Pacman",
-        "description": "Mi juego preferido",
-        "status": "1",
-        "createdAt": "2020-10-09T23:52:26.000Z",
-        "updatedAt": "2020-10-09T23:52:26.000Z"
-    }
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{
+				"id": 1,
+				"name": "Pacman",
+				"description": "Mi juego preferido",
+				"status": "1",
+				"createdAt": "2020-10-09T23:52:26.000Z",
+				"updatedAt": "2020-10-09T23:52:26.000Z"
+		}
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 # Participants API Services
 
@@ -305,102 +420,102 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 
 * **URL**
 
-  http://localhost:8000/api/participaciones/create
+	http://localhost:8000/api/participaciones/create
 
 * **Method:**
 
-  `POST`
+	`POST`
 
 * **Data Params**: JSON
 
-   ```json
-   {
-       "user": "[String]",
-       "game": "[String]",
-       "status": "[Integer]"
-   }
-   ```
+	 ```json
+	 {
+			 "user": "[String]",
+			 "game": "[String]",
+			 "status": "[Integer]"
+	 }
+	 ```
 
-   OR
+	 OR
 
-   ```json
-   {
-       "user": "[Integer]",
-       "game": "[String]",
-       "status": "[Integer]"
-   }
-   ```
+	 ```json
+	 {
+			 "user": "[Integer]",
+			 "game": "[String]",
+			 "status": "[Integer]"
+	 }
+	 ```
 
-    OR
+		OR
 
-   ```json
-   {
-       "user": "[String]",
-       "game": "[Integer]",
-       "status": "[Integer]"
-   }
-   ```
+	 ```json
+	 {
+			 "user": "[String]",
+			 "game": "[Integer]",
+			 "status": "[Integer]"
+	 }
+	 ```
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    {
-        "id": 1,
-        "jugador_id": 1,
-        "juego_id": 1,
-        "status": "1",
-        "updatedAt": "2021-05-28T10:05:56.770Z",
-        "createdAt": "2021-05-28T10:05:56.770Z"
-    }
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		{
+				"id": 1,
+				"jugador_id": 1,
+				"juego_id": 1,
+				"status": "1",
+				"updatedAt": "2021-05-28T10:05:56.770Z",
+				"createdAt": "2021-05-28T10:05:56.770Z"
+		}
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`
 
 ## List Games
 
 * **URL**
 
-  http://localhost:8000/api/participaciones/list
+	http://localhost:8000/api/participaciones/list
 
 * **Method:**
 
-  `GET`
-  
+	`GET`
+	
 *  **URL Params**
 
-   **Required:**
+	 **Required:**
  
-    None
+		None
 
 * **Data Params**:
 
-   None
+	 None
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-  * **Content:** 
-    ```json
-    [
-        {
-            "status": "1",
-            "usuario": {
-                "id": 1,
-                "username": "tomasmalio"
-            },
-            "juego": {
-                "id": 1,
-                "name": "Pacman",
-                "description": "Mi juego preferido"
-            }
-        },
-    ]
+	* **Code:** 200 <br />
+	* **Content:** 
+		```json
+		[
+				{
+						"status": "1",
+						"usuario": {
+								"id": 1,
+								"username": "tomasmalio"
+						},
+						"juego": {
+								"id": 1,
+								"name": "Pacman",
+								"description": "Mi juego preferido"
+						}
+				},
+		]
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-  * **Content:** `Cannot ERROR`
+	* **Code:** 404 NOT FOUND <br />
+	* **Content:** `Cannot ERROR`

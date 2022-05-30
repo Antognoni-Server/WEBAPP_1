@@ -1,4 +1,7 @@
+
+
 // Controllers
+const usersController = require('../controllers/users');
 const usuariosController = require('../controllers/usuarios');
 const juegosController = require('../controllers/juegos');
 const participationController = require('../controllers/participation');
@@ -10,7 +13,12 @@ module.exports = (app) => {
 	}));
 
 	// Routes of Web Services
-	// Users
+	// Users login
+	app.post('/api', usersController.create);
+	app.post('/api/login', usersController.login);
+	app.get('/api/me', usersController.me);
+
+	// Users of players
 	app.post('/api/usuarios/create/username/:username/status/:status', usuariosController.create);
 	app.get('/api/usuarios/list/status/:status', usuariosController.list);
 	app.get('/api/usuarios/find/username/:username', usuariosController.find);
