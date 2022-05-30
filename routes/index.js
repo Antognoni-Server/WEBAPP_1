@@ -6,7 +6,7 @@ const participationController = require('../controllers/participation');
 module.exports = (app) => {
 
 	app.get('/api', (req, res) => res.status(200).send({
-		message: 'Buenisimo entramos en nuestra api',
+		message: '¡Esta es una buena señal! Nuestro Node.js está funcionando correctamente ;)',
 	}));
 
 	// Routes of Web Services

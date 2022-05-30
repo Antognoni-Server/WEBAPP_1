@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./routes')(app);
 
 app.get('*', (req, res) => res.status(200).send({
-	message: 'Bienvenidos, estás en la Web Services de API 2021 2C',
+	message: 'Bienvenid@s, estás en la Web Services de Aplicaciones Interactivas de UADE.',
 }));
 
 const port = parseInt(process.env.PORT, 10) || 8000;
