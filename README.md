@@ -16,7 +16,7 @@
 # Introducción
 Con el objetivo de desarrollar un backend con microservicios, en este repositorio estaremos viendo un ejemplo de cómo implementar: Node JS, Express y MySQL con Sequelize.
 
-Para ello vamos a seguir las instrucciones de cómo crear nuestro backend utilizando el siguiente [Post en Medium](https://tomasmalio.medium.com/node-js-express-y-mysql-con-sequelize-ec0a7c0ae292).
+Para ello vamos a seguir las instrucciones de cómo crear nuestro backend utilizando el siguiente **[Post en Medium]**(https://tomasmalio.medium.com/node-js-express-y-mysql-con-sequelize-ec0a7c0ae292).
 
 Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar los microservicios. Para iniciar este proyecto:
 
