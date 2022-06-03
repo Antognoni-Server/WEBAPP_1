@@ -273,7 +273,6 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 				"username": "[String]",
 				"new_username": "[String]"
 		}
-		```
 
 * **Success Response:**
 
