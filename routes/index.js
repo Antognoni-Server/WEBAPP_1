@@ -1,5 +1,3 @@
-
-
 // Controllers
 const usersController = require('../controllers/users');
 const usuariosController = require('../controllers/usuarios');

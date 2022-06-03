@@ -6,7 +6,9 @@ module.exports = {
 	/**
 	 * Create a new user validate before if not exists
 	 * 
-	 * Example: INSERT INTO usuarios (username, status) VALUES ("lucas", "1");
+	 * Example: 
+	 * 			SELECT * FROM usuarios WHERE username = "lucas"
+	 * 			INSERT INTO usuarios (username, status) VALUES ("lucas", "1");
 	 * 
 	 * Methoud: POST
 	 * Headers: -
@@ -89,27 +91,15 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	updateUser(req, res) {
-
-		const responseUser = usuarios.findOne({
-			where: {
-				username: req.body.username
-			}
-		});
-
-		Promise
-			.all([responseUser])
-			.then(responses => {
-				return usuarios
-					.update({
-						username: req.body.new_username,
-					}, {
-						where: {
-							username: req.body.username,
-						},
-					}
-					)
-					.then(usuarios => res.status(200).send(usuarios))
-					.catch(error => res.status(400).send(error))
+		return usuarios
+			.update({
+				username: req.body.new_username,
+			}, {
+				where: {
+					username: req.body.username,
+				},
 			})
+			.then(usuarios => res.status(200).send(usuarios))
+			.catch(error => res.status(400).send(error))
 	}
 }
