@@ -12,7 +12,7 @@ module.exports = (app) => {
 
 	// Routes of Web Services
 	// Users login
-	app.post('/api', usersController.create);
+	app.post('/api/create', usersController.create);
 	app.post('/api/login', usersController.login);
 	app.get('/api/me', usersController.me);
 
