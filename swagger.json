@@ -20,9 +20,14 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/create": {
       "post": {
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "Create a new user",
         "parameters": [
           {
             "name": "body",
@@ -58,7 +63,10 @@
     },
     "/api/login": {
       "post": {
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "Login a user",
         "parameters": [
           {
             "name": "body",
@@ -91,7 +99,10 @@
     },
     "/api/me": {
       "get": {
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "Get the information of the user by token",
         "parameters": [
           {
             "name": "authorization",
@@ -213,7 +224,10 @@
     },
     "/api/juegos/create": {
       "post": {
-        "description": "",
+        "tags": [
+          "Games"
+        ],
+        "description": "Create a new game",
         "parameters": [
           {
             "name": "body",
@@ -246,7 +260,10 @@
     },
     "/api/juegos/list": {
       "get": {
-        "description": "",
+        "tags": [
+          "Games"
+        ],
+        "description": "List all the games",
         "parameters": [],
         "responses": {
           "200": {
@@ -260,7 +277,10 @@
     },
     "/api/juegos/find": {
       "get": {
-        "description": "",
+        "tags": [
+          "Games"
+        ],
+        "description": "Find a game",
         "parameters": [],
         "responses": {
           "200": {
@@ -274,7 +294,10 @@
     },
     "/api/participaciones/create": {
       "post": {
-        "description": "",
+        "tags": [
+          "Participation"
+        ],
+        "description": "Create a new play",
         "parameters": [
           {
             "name": "body",
@@ -307,7 +330,10 @@
     },
     "/api/participaciones/list": {
       "get": {
-        "description": "",
+        "tags": [
+          "Participation"
+        ],
+        "description": "List of all the plays",
         "parameters": [],
         "responses": {
           "200": {

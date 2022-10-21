@@ -41,6 +41,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	async login(req, res) {
+		// #swagger.tags = ['Users'];
+		// #swagger.description = 'Login a user'
 
 		// We look for the user by email
 		const user = await users.findOne({
@@ -83,7 +85,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	async me(req, res) {
-
+		// #swagger.tags = ['Users'];
+		// #swagger.description = 'Get the information of the user by token'
 		try {
 			let token = req.headers['authorization'];
 			let decoded = jwt.verify(token, process.env.SECRET);

@@ -17,6 +17,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	create(req, res) {
+		// #swagger.tags = ['Participation'];
+		// #swagger.description = 'Create a new play'
 		// Looking for the user
 		// SELECT * FROM usuarios WHERE id = 1 OR username = 'Lucas'
 		// SELECT * FROM usuarios WHERE id = 1
@@ -67,6 +69,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	list(_, res) {
+		// #swagger.tags = ['Participation'];
+		// #swagger.description = 'List of all the participant'
 		return participation
 			.findAll({
 				include: [{

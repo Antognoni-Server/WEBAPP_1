@@ -18,6 +18,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	create(req, res) {
+		// #swagger.tags = ['Player'];
+		// #swagger.description = 'Create a player'
 		return usuarios
 			.findOrCreate({
 				where: {
@@ -43,6 +45,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	list(req, res) {
+		// #swagger.tags = ['Player'];
+		// #swagger.description = 'List of players'
 		return usuarios
 			.findAll({
 				where: {
@@ -66,6 +70,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	find(req, res) {
+		// #swagger.tags = ['Player'];
+		// #swagger.description = 'Find a player'
 		return usuarios
 			.findOne({
 				where: {
@@ -91,6 +97,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	updateUser(req, res) {
+		// #swagger.tags = ['Player'];
+		// #swagger.description = 'Update a player'
 		return usuarios
 			.update({
 				username: req.body.new_username,

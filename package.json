@@ -1,6 +1,6 @@
 {
-	"name": "api-sequelize-2020",
-	"version": "1.0.0",
+	"name": "api-sequelize-2022",
+	"version": "1.5",
 	"description": "NodeJS + MySQL + Sequelize",
 	"main": "app.js",
 	"scripts": {

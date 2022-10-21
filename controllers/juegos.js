@@ -13,6 +13,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	create(req, res) {
+		// #swagger.tags = ['Games'];
+		// #swagger.description = 'Create a new game'
 		return juegos
 			.findOrCreate({
 				where: {
@@ -41,6 +43,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	list(_, res) {
+		// #swagger.tags = ['Games'];
+		// #swagger.description = 'List all the games'
 		return juegos
 			.findAll({})
 			.then(juegos => res.status(200).send(juegos))
@@ -60,6 +64,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	find(req, res) {
+		// #swagger.tags = ['Games'];
+		// #swagger.description = 'Find a game'
 		return juegos
 			.findOne({
 				where: {
