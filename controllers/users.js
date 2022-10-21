@@ -15,6 +15,8 @@ module.exports = {
 	 * @param {*} res 
 	 */
 	async create(req, res) {
+		// #swagger.tags = ['Users'];
+		// #swagger.description = 'Create a new user'
 		return users
 			.findOrCreate({
 				where: {
