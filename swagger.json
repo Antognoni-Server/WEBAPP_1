@@ -14,7 +14,6 @@
     "/api": {
       "get": {
         "description": "",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -125,7 +124,10 @@
     },
     "/api/usuarios/create/username/{username}/status/{status}": {
       "post": {
-        "description": "",
+        "tags": [
+          "Player"
+        ],
+        "description": "Create a player",
         "parameters": [
           {
             "name": "username",
@@ -152,7 +154,10 @@
     },
     "/api/usuarios/list/status/{status}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Player"
+        ],
+        "description": "List of players",
         "parameters": [
           {
             "name": "status",
@@ -173,7 +178,10 @@
     },
     "/api/usuarios/find/username/{username}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Player"
+        ],
+        "description": "Find a player",
         "parameters": [
           {
             "name": "username",
@@ -194,7 +202,10 @@
     },
     "/api/usuarios/updateUser": {
       "post": {
-        "description": "",
+        "tags": [
+          "Player"
+        ],
+        "description": "Update a player",
         "parameters": [
           {
             "name": "body",
@@ -264,7 +275,6 @@
           "Games"
         ],
         "description": "List all the games",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -281,7 +291,6 @@
           "Games"
         ],
         "description": "Find a game",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -333,8 +342,7 @@
         "tags": [
           "Participation"
         ],
-        "description": "List of all the plays",
-        "parameters": [],
+        "description": "List of all the participant",
         "responses": {
           "200": {
             "description": "OK"

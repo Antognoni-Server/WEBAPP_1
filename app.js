@@ -38,11 +38,11 @@ app.use('/doc', basicAuth({
 
 // Default message
 app.get('*', (req, res) => res.status(200).send({
-	message: 'Bienvenid@s, estás en la Web Services de Aplicaciones Interactivas de UADE.',
+	message: 'Bienvenid@s, estás en la Web.',
 }));
 
 // Setting port
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(process.env.PORT, 10) || 4000;
 app.set('port', port);
 
 const server = http.createServer(app);

@@ -6,8 +6,8 @@ const endpointsFiles = ['./routes/index.js']
 const basicInformation = {
     info: {
         version: "1.0.0",
-        title: "API - Node JS + Sequelize",
-        description: "Web Services Documentation"
+        title: "AntognoniWebApp",
+        description: "Complemento de Documentación"
     },
 }
 swaggerAutogen(outputFile, endpointsFiles, basicInformation);
