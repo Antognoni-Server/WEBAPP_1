@@ -20,7 +20,7 @@
 # Introducción
 Con el objetivo de desarrollar un backend con microservicios, en este repositorio estaremos viendo un ejemplo de cómo implementar: Node JS, Express y MySQL con Sequelize.
 
-Para ello vamos a seguir las instrucciones de cómo crear nuestro backend utilizando el siguiente [**Post en Medium**](https://tomasmalio.medium.com/node-js-express-y-mysql-con-sequelize-ec0a7c0ae292).
+Para ello vamos a seguir las instrucciones de cómo crear nuestro backend utilizando el siguiente post:
 
 Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar los microservicios. Para iniciar este proyecto:
 
@@ -56,12 +56,12 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{ 
 				"id": 1, 
-				"first_name": "Tomás", 
-				"last_name": "Malio", 
-				"email": "tomas@dominio.com", 
+				"first_name": "Héctor", 
+				"last_name": "Antognoni", 
+				"email": "antognoniserver@gmail.com", 
 				"password": "123456789",
-				"createdAt": "2020-10-09T23:42:44.000Z",
-				"updatedAt": "2020-10-09T23:42:44.000Z"
+				"createdAt": "2024-06-09T23:42:44.000Z",
+				"updatedAt": "2024-06-09T23:42:44.000Z"
 		}
 		```
 
@@ -122,9 +122,9 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{ 
 				"id": 3,
-				"first_name": "Tomas",
-				"last_name": "Malio",
-				"email": "tomas@dominio.com",
+				"first_name": "Héctor",
+				"last_name": "Antognoni",
+				"email": "antognoniserver@gmail.com",
 				"createdAt": "2022-05-30T14:24:51.000Z",
 				"updatedAt": "2022-05-30T14:24:51.000Z"
 		}
@@ -164,7 +164,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{ 
 				"id": 1, 
-				"username": "tomasmalio", 
+				"username": "HéctorAntognoni", 
 				"status": "1",
 				"createdAt": "2020-10-09T23:42:44.000Z",
 				"updatedAt": "2020-10-09T23:42:44.000Z"
@@ -204,7 +204,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		[
 				{ 
 						"id": 1, 
-						"username": "tomasmalio",
+						"username": "Héctor Antognoni",
 						"status": "1"
 				}
 		]
@@ -242,7 +242,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{
 				"id": 1,
-				"username": "tomasmalio",
+				"username": "Héctor Antognoni",
 				"status": "1",
 				"createdAt": "2020-10-09T23:42:44.000Z",
 				"updatedAt": "2020-10-09T23:42:44.000Z"
@@ -317,7 +317,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{
 				"id": 1,
-				"name": "Pacman",
+				"name": "King of Figters",
 				"description": "Mi juego preferido",
 				"status": "1",
 				"createdAt": "2020-10-09T23:52:26.000Z",
@@ -357,7 +357,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		[
 				{
 						"id": 1,
-						"name": "Pacman",
+						"name": "The King of Figters",
 						"description": "Mi juego preferido",
 						"status": "1",
 						"createdAt": "2020-10-09T23:52:26.000Z",
@@ -395,7 +395,7 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 		```json
 		{
 				"id": 1,
-				"name": "Pacman",
+				"name": "TheKingofFigters",
 				"description": "Mi juego preferido",
 				"status": "1",
 				"createdAt": "2020-10-09T23:52:26.000Z",
@@ -498,11 +498,11 @@ Una vez que lo tenemos creado únicamente queda comenzarlo y empezar a probar lo
 						"status": "1",
 						"usuario": {
 								"id": 1,
-								"username": "tomasmalio"
+								"username": "Héctor"
 						},
 						"juego": {
 								"id": 1,
-								"name": "Pacman",
+								"name": "TKoF",
 								"description": "Mi juego preferido"
 						}
 				},
