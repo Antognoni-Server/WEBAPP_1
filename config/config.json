@@ -1,9 +1,9 @@
 {
 	"development": {
-		"username": "root",
-		"password": "123456",
-		"database": "apisequelize",
-		"host": "127.0.0.1",
+		"username": "hector",
+		"password": "Antognoni",
+		"database": "antognoniddbb",
+		"host": "192.168.0.2",
 		"dialect": "mysql"
 	},
 	"test": {

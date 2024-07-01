@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "API - Node JS + Sequelize",
-    "description": "Web Services Documentation"
+    "title": "AntognoniWebApp",
+    "description": "Complemento de Documentación"
   },
   "host": "localhost:3000",
   "basePath": "/",

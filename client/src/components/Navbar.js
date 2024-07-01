@@ -6,6 +6,7 @@ class Landing extends Component {
     e.preventDefault()
     localStorage.removeItem('usertoken')
     this.props.history.push(`/`)
+    //Aquies donde pasamos a cargar a index ->  puede ser ej: /componen/users. 
   }
 
   render() {
@@ -37,7 +38,7 @@ class Landing extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <a href="http://localhost:3000/login" onClick={this.logOut.bind(this)} className="nav-link">
+          <a href="http://localhost:4000/api" onClick={this.logOut.bind(this)} className="nav-link">
             Salir
           </a>
         </li>

@@ -1,10 +1,13 @@
 import axios from 'axios'
-//const sequelize = require('sequelize')
+const baseURL = "http://localhost:4000/api/login";
+//ver como concatenar la url base a url especifica de ruta.
+
 
 export const register = newUser => {
   return axios
-    .post('users/register', {
-      first_name: newUser.first_name,
+    //.post('users/register', {
+      .post(baseURL, {  
+    first_name: newUser.first_name,
       last_name: newUser.last_name,
       email: newUser.email,
       password: newUser.password
@@ -13,10 +16,9 @@ export const register = newUser => {
       console.log('Registered')
     })
 }
-
 export const login = user => {
   return axios
-    .post('users/login', {
+    .post(baseURL, {
       email: user.email,
       password: user.password
     })
@@ -30,14 +32,41 @@ export const login = user => {
     })
 }
 export const getuser = users => {
-  alert('hola, has recibido una alerta')
+  const [post, setPost] = React.useState(null);
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+
+  if (!post) return null;
+
+  return (
+    <div>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+    </div>
+  );
+
+  alert('hola, has recibido un json')
 }
 
-/* Ver si esto debe de estar en el controlador
-export const getuser = users => {
-  sequelize.query("SELECT * FROM `user`", { type: sequelize.QueryTypes.SELECT})
-  .then(function(user) {
-    // We don't need spread here, since only the results will be returned for select queries
-  })
-}
+/*
+export default function App() {
+  const [post, setPost] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+
+  if (!post) return null;
+
+  return (
+    <div>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+    </div>
+  );
 */

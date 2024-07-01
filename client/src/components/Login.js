@@ -27,7 +27,9 @@ class Login extends Component {
 
     login(user).then(res => {
       if (res) {
+        console.log('en el cliente: login(user)  if {}')
         this.props.history.push(`/profile`)
+// Sí la validación es correcta se carga la vista del perfil: /profile
       }
     })
   }

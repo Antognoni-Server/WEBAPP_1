@@ -1,4 +1,4 @@
-const users = require('../models').users;
+const user = require('../models').user;
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
@@ -45,7 +45,8 @@ module.exports = {
 		// #swagger.description = 'Login a user'
 
 		// We look for the user by email
-		const user = await users.findOne({
+		console.log('dentro de logind en el server');
+		const user = await user.findOne({
 			where: {
 				email: req.body.email
 			}
