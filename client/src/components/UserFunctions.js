@@ -1,6 +1,6 @@
 import axios from 'axios'
 const baseURL = "http://localhost:4000/api/login";
-//ver como concatenar la url base a url especifica de ruta.
+//ver como concatenar la url base a url especifica a cada ruta.
 
 
 export const register = newUser => {
@@ -50,23 +50,3 @@ export const getuser = users => {
 
   alert('hola, has recibido un json')
 }
-
-/*
-export default function App() {
-  const [post, setPost] = React.useState(null);
-
-  React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-
-  if (!post) return null;
-
-  return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
-    </div>
-  );
-*/

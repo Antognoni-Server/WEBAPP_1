@@ -26,6 +26,7 @@ class Login extends Component {
     }
 
     login(user).then(res => {
+      console.log('en el cliente: login antes del if')
       if (res) {
         console.log('en el cliente: login(user)  if {}')
         this.props.history.push(`/profile`)

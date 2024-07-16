@@ -1,5 +1,5 @@
 // Controllers
-const usersController = require('../controllers/users');
+const usersController = require('../controllers/user');
 const usuariosController = require('../controllers/usuarios');
 const juegosController = require('../controllers/juegos');
 const participationController = require('../controllers/participation');
