@@ -31,4 +31,7 @@ module.exports = (app) => {
 	app.post('/api/participaciones/create', participationController.create);
 	app.get('/api/participaciones/list', participationController.list);
 
+	//Profile
+	//app.post('api/profile',)
+
 };

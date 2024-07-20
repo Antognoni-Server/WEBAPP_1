@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { login } from './UserFunctions'
 
 class Login extends Component {
@@ -24,12 +25,21 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }
+    var userRecibido = {
+      email: this.state.email,
+      password: this.state.password,
+      token: ''
+    };
+    
+    var token = '';
 
     login(user).then(res => {
-      console.log('en el cliente: login antes del if')
-      if (res) {
-        console.log('en el cliente: login(user)  if {}')
-        this.props.history.push(`/profile`)
+      token = res;
+      console.log('Cliente: componentes/login.js: onSubmit()->login(user)  token_user_recibido= '+ token);
+      if (token) {
+        console.log('Cliente: componenets/login(user)  if {token} --> OK ...');
+        console.log('Cargando Perfil');
+        this.props.history.push('/Profile');
 // Sí la validación es correcta se carga la vista del perfil: /profile
       }
     })
@@ -78,4 +88,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default withRouter(Login)

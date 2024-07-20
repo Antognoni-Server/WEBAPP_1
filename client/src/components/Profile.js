@@ -16,8 +16,8 @@ class Profile extends Component {
     const token = localStorage.usertoken
     const decoded = jwt_decode(token)
     this.setState({
-      first_name: decoded.first_name,
-      last_name: decoded.last_name,
+      id: decoded.id,
+      userName: decoded.userName,
       email: decoded.email
     })
   }
@@ -27,26 +27,54 @@ class Profile extends Component {
       <div className="container">
         <div className="jumbotron mt-5">
           <div className="col-sm-8 mx-auto">
-            <h1 className="text-center">PROFILE</h1>
+            <h1 className="text-center">PERFIL DE USUARIO</h1>
           </div>
           <table className="table col-md-6 mx-auto">
             <tbody>
               <tr>
-                <td>Fist Name</td>
-                <td>{this.state.first_name}</td>
+                <td>Identificador en DDBB</td>
+                <td>{this.state.id}</td>
               </tr>
               <tr>
-                <td>Last Name</td>
-                <td>{this.state.last_name}</td>
+                <td>Apellido</td>
+                <td>{this.state.userName}</td>
               </tr>
               <tr>
-                <td>Email</td>
+                <td>Correo @ Electrónico</td>
                 <td>{this.state.email}</td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <div className="jumbotron mt-5">
+          <div className="col-sm-8 mx-auto">
+            <h1 className="text-center">PERFIL DE USUARIO</h1>
+          </div>
+          <table className="table col-md-6 mx-auto">
+            <tbody>
+              <tr>
+                <td>Botón Uno</td>
+                <td><button type="submit" className="btn btn-lg btn-primary btn-block" > 1 1 1 </button></td>
+              </tr>
+              <tr>
+                <td>Botón Dos</td>
+                <td><button type="submit" className="btn btn-lg btn-primary btn-block" > 2 2 2 2 2 </button></td>
+              </tr>
+              <tr>
+                <td>Botón Tres</td>
+                <td><button type="submit" className="btn btn-lg btn-primary btn-block" > 3 3 3 3 3 3 3 </button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
       </div>
+
+
+      
+      
     )
   }
 }

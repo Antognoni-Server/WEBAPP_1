@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-var cors = require('cors');
+const cors = require('cors');
 const http = require('http');
 const errorHandler = require('./_middleware/error-handler');
 
@@ -17,6 +17,12 @@ app.use(express.json());
 // Cross Over
 app.options('*', cors());
 app.use(logger('dev'));
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-//import { getuser } from './UserFunctions'
-//const sequelize = require('sequelize')
-/*
-function usuariostodos(){
-       sequelize.query("SELECT * FROM `user`", { type: sequelize.QueryTypes.SELECT})
-        }
-*/
+
 const baseURL = "http://localhost:4000/api/login";
 //Cada url debe apuntar a un endpoint de la API
 

@@ -1,6 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
+axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 const baseURL = "http://localhost:4000/api/login";
-//ver como concatenar la url base a url especifica a cada ruta.
+//ver como concatenar la url base a url especifica a cada ruta. Esta solo para login().
 
 
 export const register = newUser => {
@@ -21,11 +23,27 @@ export const login = user => {
     .post(baseURL, {
       email: user.email,
       password: user.password
-    })
+    },{
+      headers: {
+        'Content-Type': 'application/json',
+        'mode': 'no-cors'
+      }
+    }
+  )
     .then(response => {
-      localStorage.setItem('usertoken', response.data)
-      console.log("usuario guardado en ddbb")
-      return response.data
+      console.log("Cliente: componentes/Userfunction.js: login() -> ver: Response");
+      /*var userRecibido = {
+        email: '',
+        password: ''
+      }*/
+      var userRecibido = {
+        token: ''
+      }
+      userRecibido = Object.assign({}, response.data);
+      console.log('valores en response, ahí esta mi toookeeeenn: '+ userRecibido.token);
+      console.log('Almacenando token en localstore o Almacenamiento Local. usertoken: userRecibido')
+      localStorage.setItem('usertoken', userRecibido.token);
+      return userRecibido.token;
     })
     .catch(err => {
       console.log(err)

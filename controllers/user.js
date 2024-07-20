@@ -6,7 +6,7 @@ const db = require('../databases/db.js');
 //var dbx = require('../databases/db_aux.js');
 
 var user = require('../models/user.js');
-
+user = require('../models').User;
 module.exports = {
 	/**
 	 * Create the user to login
@@ -30,7 +30,7 @@ module.exports = {
 					password: await bcrypt.hash(req.body.password, 10),
 				},
 			})
-			.then(users => res.status(200).send(users))
+			.then(user => res.status(200).send(user))
 			.catch(error => res.status(400).send(error))
 	},
 
@@ -54,7 +54,9 @@ module.exports = {
 			//console.log('Valor ingresado teclado: ' + req.body.email)
 
 			// We look for the user by email
-			console.log('En controllers/user.js: login() en el server,  buscar : '+ req.body.email );
+			const correo = req.body.email;
+			const pass = req.body.password;
+			console.log('En controllers/user.js: login() en el server,  buscar : '+ correo + pass );
 			/*
 			const user = await dbx.user.findOne({
 				where: {
@@ -62,17 +64,16 @@ module.exports = {
 				}
 			})
 			*/
-			const correo = req.body.email;
 
 			user = await db.buscaruno(correo);
 
 			
-			console.log(user);
+			console.log('En controllers/user.js con objeto usuario desde ddbb, Apellido:'+user.lastname);
 			
 		if (user) {
 			console.log('existe el usuario...  next: compare bcrypt password navegador: ' +req.body.password);
 			// Checking the password in the database with the received in the body
-			const password_valid = bcrypt.compare(req.body.password, user.password);
+			const password_valid = bcrypt.compare(pass, user.password);
 			// We validate if the password is correct so we print the token
 			if (password_valid) {
 				console.log('comparación de contraseñas valida: ');
@@ -82,14 +83,14 @@ module.exports = {
 					'userName': user.userName
 				}, process.env.JWT_KEY);
 
-				// Everything is correct so we print the token
+				// Todo bien, retornar 200, enviar a cliente el OK.
 				res.status(200).json({ token: token });
 			} else {
 				console.log('contraseña invalida: ');
-				res.status(400).json({ error: "Password Incorrect" });
+				res.status(400).json({ error: "Palabra secreta esta errada." });
 			}
 		} else {
-			res.status(404).json({ error: "User does not exist" });
+			res.status(404).json({ error: "Usuario no encontrado en la ddbb" });
 		}
 		
 	},

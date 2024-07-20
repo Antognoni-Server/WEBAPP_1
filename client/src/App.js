@@ -5,9 +5,9 @@ import Navbar from './components/Navbar'
 import Landing from './components/Landing'
 import Login from './components/Login'
 import Register from './components/Register'
-import UsuariosInscritos from './components/usuariosendb'
 import Profile from './components/Profile'
-
+import UsuariosInscritos from './components/usuariosendb' 
+ 
 class App extends Component {
   render() {
     return (
