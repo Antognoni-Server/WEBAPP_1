@@ -1,13 +1,32 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+/*  
+Para migrar la barra de navegacion a boostrap/css
+
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import NavbarBrand from 'react-bootstrap/NavbarBrand';
+import Navbar from 'react-bootstrap/Navbar';
+import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+import NavbarToggle from 'react-bootstrap/NavbarToggle';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+*/
+
+
 
 class Landing extends Component {
   logOut(e) {
     e.preventDefault()
     localStorage.removeItem('usertoken')
     this.props.history.push(`/`)
-    //Aquies donde pasamos a cargar a index ->  puede ser ej: /componen/users. 
+    //Aquies donde pasamos a cargar  index.js ->  puede ser ej: /componen/users. 
   }
+  //   Instancias de barra de navegación
+    //Instancia loginRegLink, sin Token: logOut.
+    //Instancia userLink, extiende a navbar-nav: con token
 
   render() {
     const loginRegLink = (
@@ -66,7 +85,7 @@ class Landing extends Component {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                Hogar, Dulce hogar
+                Bienvenida
               </Link>
             </li>
           </ul>

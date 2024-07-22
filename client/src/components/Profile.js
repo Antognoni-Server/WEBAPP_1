@@ -5,13 +5,14 @@ class Profile extends Component {
   constructor() {
     super()
     this.state = {
-      first_name: '',
-      last_name: '',
+      id: '',
+      userName: '',
       email: '',
+      unparametro: 'hola mundo',
       errors: {}
     }
   }
-
+  
   componentDidMount() {
     const token = localStorage.usertoken
     const decoded = jwt_decode(token)
@@ -20,6 +21,14 @@ class Profile extends Component {
       userName: decoded.userName,
       email: decoded.email
     })
+  }
+
+   clickMe(event, someParameter){
+    //do with event
+    event.Imaginar;
+    const unparametro = someParameter;
+    console.log('El parametro es: '+ unparametro);
+    this.props.history.push('/');
   }
 
   render() {
@@ -63,18 +72,18 @@ class Profile extends Component {
               </tr>
               <tr>
                 <td>Botón Tres</td>
-                <td><button type="submit" className="btn btn-lg btn-primary btn-block" > 3 3 3 3 3 3 3 </button></td>
+                <td><button 
+                        type="submit" 
+                        className="btn btn-lg btn-primary btn-block" 
+                        onClick={(e) => {
+                          this.clickMe(e, this.state.unparametro)}}
+                        > 3 3 3 3 3 3 3 
+                </button></td>
               </tr>
             </tbody>
           </table>
         </div>
-
-
       </div>
-
-
-      
-      
     )
   }
 }

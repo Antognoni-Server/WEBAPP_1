@@ -6,6 +6,7 @@ import Landing from './components/Landing'
 import Login from './components/Login'
 import Register from './components/Register'
 import Profile from './components/Profile'
+import WhereIsIt from './components/WhereIsIt'
 import UsuariosInscritos from './components/usuariosendb' 
  
 class App extends Component {
